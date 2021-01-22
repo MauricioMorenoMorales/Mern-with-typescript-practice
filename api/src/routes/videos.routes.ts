@@ -5,7 +5,7 @@ const router = Router()
 
 router.get('/', videosController.getVideos)
 
-router.get('/:id', (req: Request, res: Response) => {})
+router.get('/:id', videosController.getVideo)
 
 router.post('/', videosController.createVideo)
 

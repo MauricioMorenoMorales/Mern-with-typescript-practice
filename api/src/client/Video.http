@@ -3,13 +3,16 @@
 GET {{host}}/videos/
 
 ###
+GET {{host}}/videos/600b61ccc53a02c75894c35a
+
+###
 POST {{host}}/videos/
 Content-Type: application/json
 
 {
-	"title":"Rosseau piano collection",
-	"url": "https://www.youtube.com/watch?v=cGYyOY4XaFs",
-	"description": "A bunch of classical piano songs"
+	"title":"Claudia Paquito de rivera",
+	"url": "https://www.youtube.com/watch?v=y81WC2JZN1Y&list=RDy81WC2JZN1Y&start_radio=1",
+	"description": "A latin jazz song"
 }
 ###
 DELETE {{host}}/videos/

@@ -2,7 +2,7 @@ import mongoose, { ConnectionOptions } from 'mongoose'
 import chalk from 'chalk'
 import config from './config'
 ;(async () => {
-	const URI = (username: string, password: string, dbname: string) =>
+	const URI = (username: string, password: string, dbname: string): string =>
 		`mongodb+srv://${username}:${password}@nodejsplatzi.cg57m.mongodb.net/${dbname}?retryWrites=true&w=majority`
 
 	const mongooseOptions: ConnectionOptions = {

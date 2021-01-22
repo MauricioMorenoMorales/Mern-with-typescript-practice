@@ -9,7 +9,18 @@ export const getVideos: RequestHandler = async (req, res) => {
 }
 
 export const getVideo: RequestHandler = async (req, res) => {
-	responses.success(req, res, 'Video enviado', 200)
+	console.log(req.params.id)
+	const databaseResponse = await videoModel.findById(req.params.id)
+	if (!databaseResponse)
+		return responses.failure(
+			req,
+			res,
+			'No se encontró el video:(',
+			500,
+			'[videos:controller]: no se encontró el video pedido',
+		)
+	console.log(databaseResponse)
+	responses.success(req, res, databaseResponse, 200)
 }
 
 export const createVideo: RequestHandler = async (req, res) => {
