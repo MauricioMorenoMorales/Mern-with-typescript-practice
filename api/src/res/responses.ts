@@ -1,15 +1,15 @@
-import { Response, Request } from 'express'
+import { Response, Request, json } from 'express'
 import chalk from 'chalk'
 
 export const success = (
 	req: Request,
 	res: Response,
-	message: string,
+	message: string | object | JSON,
 	status: number,
 ) => {
 	console.log()
 	console.log(chalk.green('Respuesta enviada'))
-	res.status(status || 200).send(message)
+	res.status(status || 200).json(message)
 }
 
 export const failure = (

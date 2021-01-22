@@ -11,7 +11,8 @@ import videoRoutes from './routes/videos.routes'
 app.set('port', process.env.PORT || 4444)
 
 //middlewares
-app.use(morgan('common'))
+app.use(morgan('dev'))
+app.use(express.url)
 
 app.use('/videos', videoRoutes)
 
