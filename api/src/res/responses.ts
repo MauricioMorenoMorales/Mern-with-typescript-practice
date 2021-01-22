@@ -8,7 +8,7 @@ export const success = (
 	status: number,
 ) => {
 	console.log()
-	console.log(chalk.green('Respuesta enviada'))
+	console.log(chalk.green('Respuesta enviada', req.body))
 	res.status(status || 200).json(message)
 }
 
@@ -17,7 +17,7 @@ export const failure = (
 	res: Response,
 	message: string,
 	status: number,
-	internalMessage: string,
+	internalMessage?: string,
 ) => {
 	console.log(
 		`${chalk.inverse.red('[VideoResponses]')} ha ocurrido un error ${chalk.red(

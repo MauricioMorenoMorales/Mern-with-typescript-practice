@@ -9,9 +9,8 @@ router.get('/:id', (req: Request, res: Response) => {})
 
 router.post('/', videosController.createVideo)
 
-router.delete('/:id', (req: Request, res: Response) => {
-	res.send('Hola desde delete')
-})
+router.delete('/:id', videosController.deleteVIdeo)
+
 router.put('/:id', (req: Request, res: Response) => {
 	res.send('Hola desde put')
 })
