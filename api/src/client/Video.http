@@ -10,9 +10,9 @@ POST {{host}}/videos/
 Content-Type: application/json
 
 {
-	"title":"Claudia Paquito de rivera",
-	"url": "https://www.youtube.com/watch?v=y81WC2JZN1Y&list=RDy81WC2JZN1Y&start_radio=1",
-	"description": "A latin jazz song"
+	"title":"Instant Crush",
+	"url": "https://www.youtube.com/watch?v=a5uQMwRMHcs",
+	"description": "A daft punk song:("
 }
 ###
-DELETE {{host}}/videos/
+DELETE {{host}}/videos/600b61ccc53a02c75894c35a
